@@ -1,0 +1,147 @@
+﻿@model ChooseYourBike.Models.Product
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Model)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Model)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Manufacturer)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Manufacturer)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfBuild)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBuild)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Accesories1.AccDescription)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Accesories1.AccDescription)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Brakes1.FrBrakeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Brakes1.FrBrakeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category1.Category_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category1.Category_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fork1.ForkName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fork1.ForkName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Frame1.Material)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Frame1.Material)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mark1.Mark_Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mark1.Mark_Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pedals1.Material)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pedals1.Material)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Saddle1.SaddleName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Saddle1.SaddleName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Shifters1.ShiftersName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Shifters1.ShiftersName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.StrWheel1.StrWheelName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StrWheel1.StrWheelName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Transmission1.SystemName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Transmission1.SystemName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Wheels1.Diameter)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Wheels1.Diameter)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

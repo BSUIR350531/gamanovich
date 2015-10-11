@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content="The description of my page" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Edit database
+                    </a>
+                </li>
+                <li>
+                    @Html.ActionLink("Accesories", "Index", "Accesories")
+                </li>
+                <li>
+                    @Html.ActionLink("Advertising", "Index", "Advertisings")
+                </li>
+                <li>
+                    @Html.ActionLink("Brakes", "Index", "Brakes")
+                </li>
+                <li>
+                    @Html.ActionLink("Category", "Index", "Categories")
+                </li>
+                <li>
+                    @Html.ActionLink("Comments", "Index", "Comments")
+                </li>
+                <li>
+                    @Html.ActionLink("Fork", "Index", "Forks")
+                </li>
+                <li>
+                    @Html.ActionLink("Frame", "Index", "Frames")
+                </li>
+                <li>
+                    @Html.ActionLink("Image", "Index", "Images")
+                </li>
+                <li>
+                    @Html.ActionLink("Mark", "Index", "Marks")
+                </li>
+                <li>
+                    @Html.ActionLink("Pedals", "Index", "Pedals")
+                </li>
+                <li>
+                    @Html.ActionLink("Product", "Index", "Products")
+                </li>
+                <li>
+                    @Html.ActionLink("Saddle", "Index", "Saddles")
+                </li>
+                <li>
+                    @Html.ActionLink("Shifters", "Index", "Shifters")
+                </li>
+                <li>
+                    @Html.ActionLink("Steering bar", "Index", "StrWheels")
+                </li>
+                <li>
+                    @Html.ActionLink("Transmission", "Index", "Transmissions")
+                </li>
+                <li>
+                    @Html.ActionLink("Wheels", "Index", "Wheels")
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BikeSiteDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accesories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccDescription" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Advertising">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Advertising_ID" Type="int" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Price" Type="decimal" Precision="16" Scale="2" />
+  </EntityType>
+  <EntityType Name="Brakes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FrBrakeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FrBrakeType" Type="nvarchar" MaxLength="20" />
+    <Property Name="RrBrakeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RrBrakeType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comments_ID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Fork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ForkName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ForkType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShockStep" Type="nvarchar" MaxLength="10" />
+    <Property Name="Block" Type="bit" />
+    <Property Name="Diameter" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Frame">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Material" Type="nvarchar" MaxLength="50" />
+    <Property Name="FrameType" Type="nvarchar" MaxLength="50" />
+    <Property Name="FrameColor" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image_ID" Type="int" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Mark">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mark_Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Pedals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Material" Type="nvarchar" MaxLength="50" />
+    <Property Name="PedalsType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mark" Type="int" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="DateOfBuild" Type="date" />
+    <Property Name="Frame" Type="int" />
+    <Property Name="Fork" Type="int" />
+    <Property Name="Transmission" Type="int" />
+    <Property Name="Shifters" Type="int" />
+    <Property Name="Brakes" Type="int" />
+    <Property Name="Wheels" Type="int" />
+    <Property Name="StrWheel" Type="int" />
+    <Property Name="Saddle" Type="int" />
+    <Property Name="Pedals" Type="int" />
+    <Property Name="Accesories" Type="int" />
+  </EntityType>
+  <EntityType Name="Saddle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SaddleType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shifters">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShiftersName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftersType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="StrWheel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StrWheelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StrWheelType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Transmission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpeedCount" Type="int" />
+    <Property Name="SystemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Chain" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Wheels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Diameter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Material" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tyres" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Advertisi__Adver__2057CCD0">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Advertising" Type="Self.Advertising" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Advertising">
+        <PropertyRef Name="Advertising_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Commen__214BF109">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="Comments_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Image__Image_ID__1B9317B3">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Image" Type="Self.Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="Image_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToAccesories">
+    <End Role="Accesories" Type="Self.Accesories" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accesories">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Accesories" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToBrakes">
+    <End Role="Brakes" Type="Self.Brakes" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brakes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Brakes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToCategory">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToFork">
+    <End Role="Fork" Type="Self.Fork" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fork">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Fork" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToFrame">
+    <End Role="Frame" Type="Self.Frame" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Frame">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Frame" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToMark">
+    <End Role="Mark" Type="Self.Mark" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mark">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Mark" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToPedals">
+    <End Role="Pedals" Type="Self.Pedals" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedals">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Pedals" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToSaddle">
+    <End Role="Saddle" Type="Self.Saddle" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saddle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Saddle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToShifters">
+    <End Role="Shifters" Type="Self.Shifters" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shifters">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Shifters" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToStrWheel">
+    <End Role="StrWheel" Type="Self.StrWheel" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StrWheel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="StrWheel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToTransmission">
+    <End Role="Transmission" Type="Self.Transmission" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transmission">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Transmission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ToWheels">
+    <End Role="Wheels" Type="Self.Wheels" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wheels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Wheels" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BikeSiteDBModelContainer">
+    <EntitySet Name="Accesories" EntityType="Self.Accesories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Advertising" EntityType="Self.Advertising" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brakes" EntityType="Self.Brakes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fork" EntityType="Self.Fork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Frame" EntityType="Self.Frame" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mark" EntityType="Self.Mark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pedals" EntityType="Self.Pedals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saddle" EntityType="Self.Saddle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shifters" EntityType="Self.Shifters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StrWheel" EntityType="Self.StrWheel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transmission" EntityType="Self.Transmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wheels" EntityType="Self.Wheels" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Advertisi__Adver__2057CCD0" Association="Self.FK__Advertisi__Adver__2057CCD0">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Advertising" EntitySet="Advertising" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Commen__214BF109" Association="Self.FK__Comments__Commen__214BF109">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Image__Image_ID__1B9317B3" Association="Self.FK__Image__Image_ID__1B9317B3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Image" EntitySet="Image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToAccesories" Association="Self.FK_Product_ToAccesories">
+      <End Role="Accesories" EntitySet="Accesories" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToBrakes" Association="Self.FK_Product_ToBrakes">
+      <End Role="Brakes" EntitySet="Brakes" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToCategory" Association="Self.FK_Product_ToCategory">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToFork" Association="Self.FK_Product_ToFork">
+      <End Role="Fork" EntitySet="Fork" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToFrame" Association="Self.FK_Product_ToFrame">
+      <End Role="Frame" EntitySet="Frame" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToMark" Association="Self.FK_Product_ToMark">
+      <End Role="Mark" EntitySet="Mark" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToPedals" Association="Self.FK_Product_ToPedals">
+      <End Role="Pedals" EntitySet="Pedals" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToSaddle" Association="Self.FK_Product_ToSaddle">
+      <End Role="Saddle" EntitySet="Saddle" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToShifters" Association="Self.FK_Product_ToShifters">
+      <End Role="Shifters" EntitySet="Shifters" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToStrWheel" Association="Self.FK_Product_ToStrWheel">
+      <End Role="StrWheel" EntitySet="StrWheel" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToTransmission" Association="Self.FK_Product_ToTransmission">
+      <End Role="Transmission" EntitySet="Transmission" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ToWheels" Association="Self.FK_Product_ToWheels">
+      <End Role="Wheels" EntitySet="Wheels" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

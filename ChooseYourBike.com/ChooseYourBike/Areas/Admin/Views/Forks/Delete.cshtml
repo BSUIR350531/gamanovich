@@ -1,0 +1,73 @@
+﻿@model ChooseYourBike.Models.Fork
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Fork</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ForkName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ForkName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ForkType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ForkType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ShockStep)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ShockStep)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Block)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Block)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Diameter)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Diameter)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

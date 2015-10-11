@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="430beb4cd49c4c558968c9d0c994a330" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="BikeSiteDBModel.Accesories" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Brakes" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Category" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Fork" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Frame" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Mark" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Pedals" Width="1.5" PointX="0.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Product" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Saddle" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Shifters" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.StrWheel" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Transmission" Width="1.5" PointX="0.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Wheels" Width="1.5" PointX="0.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Advertising" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToAccesories" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToBrakes" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToFork" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToFrame" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToMark" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToPedals" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToSaddle" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToShifters" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToStrWheel" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToTransmission" ManuallyRouted="false" />
+        <AssociationConnector Association="BikeSiteDBModel.FK_Product_ToWheels" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Comments" Width="1.5" PointX="6" PointY="7" />
+        <EntityTypeShape EntityType="BikeSiteDBModel.Image" Width="1.5" PointX="7.75" PointY="5.375" />
+        <AssociationConnector Association="BikeSiteDBModel.FK__Advertisi__Adver__0F2D40CE" />
+        <AssociationConnector Association="BikeSiteDBModel.FK__Comments__Commen__10216507" />
+        <AssociationConnector Association="BikeSiteDBModel.FK__Image__Image_ID__11158940" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

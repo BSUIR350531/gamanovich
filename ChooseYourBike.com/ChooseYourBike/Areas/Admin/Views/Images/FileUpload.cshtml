@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FileUpload</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("FileUpload", "Images", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+        {
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" id="file" style="width: 100%;" />
+            <input type="submit" value="Upload" class="submit" />
+        }
+    </div>
+</body>
+</html>

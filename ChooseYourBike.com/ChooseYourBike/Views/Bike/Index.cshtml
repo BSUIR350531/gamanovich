@@ -1,0 +1,19 @@
+﻿@model PagedList.IPagedList<ChooseYourBike.Models.Product>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/BikePage/_LayoutBikePage.cshtml";
+}
+<p>
+    <div>
+        @foreach (var p in Model)
+        {
+            @Html.Partial("BikeSummary", p)
+        }
+        <div>
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index",
+            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</p>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ChooseYourBike.Models.Brakes>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FrBrakeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrBrakeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RrBrakeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RrBrakeType)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrBrakeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrBrakeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RrBrakeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RrBrakeType)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+        <tr>
+            <td>
+                @Html.ActionLink("Create New", "Create")
+            </td>
+        </tr>
+    
+    </table>
+</body>
+</html>

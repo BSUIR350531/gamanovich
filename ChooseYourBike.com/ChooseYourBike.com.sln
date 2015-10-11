@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChooseYourBike", "ChooseYourBike\ChooseYourBike.csproj", "{26578F0C-DFA7-49DA-83DA-D345E1B22C5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26578F0C-DFA7-49DA-83DA-D345E1B22C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26578F0C-DFA7-49DA-83DA-D345E1B22C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26578F0C-DFA7-49DA-83DA-D345E1B22C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26578F0C-DFA7-49DA-83DA-D345E1B22C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

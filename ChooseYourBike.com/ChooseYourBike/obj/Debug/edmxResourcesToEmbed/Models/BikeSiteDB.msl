@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BikeSiteDBModelContainer" CdmEntityContainer="BikeSiteDBEntities">
+    <EntitySetMapping Name="Accesories">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Accesories">
+        <MappingFragment StoreEntitySet="Accesories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccDescription" ColumnName="AccDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brakes">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Brakes">
+        <MappingFragment StoreEntitySet="Brakes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FrBrakeName" ColumnName="FrBrakeName" />
+          <ScalarProperty Name="FrBrakeType" ColumnName="FrBrakeType" />
+          <ScalarProperty Name="RrBrakeName" ColumnName="RrBrakeName" />
+          <ScalarProperty Name="RrBrakeType" ColumnName="RrBrakeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fork">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Fork">
+        <MappingFragment StoreEntitySet="Fork">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ForkName" ColumnName="ForkName" />
+          <ScalarProperty Name="ForkType" ColumnName="ForkType" />
+          <ScalarProperty Name="ShockStep" ColumnName="ShockStep" />
+          <ScalarProperty Name="Block" ColumnName="Block" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Frame">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Frame">
+        <MappingFragment StoreEntitySet="Frame">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="FrameType" ColumnName="FrameType" />
+          <ScalarProperty Name="FrameColor" ColumnName="FrameColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mark">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Mark">
+        <MappingFragment StoreEntitySet="Mark">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Mark_Name" ColumnName="Mark_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedals">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Pedals">
+        <MappingFragment StoreEntitySet="Pedals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="PedalsType" ColumnName="PedalsType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="DateOfBuild" ColumnName="DateOfBuild" />
+          <ScalarProperty Name="Frame" ColumnName="Frame" />
+          <ScalarProperty Name="Fork" ColumnName="Fork" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+          <ScalarProperty Name="Shifters" ColumnName="Shifters" />
+          <ScalarProperty Name="Brakes" ColumnName="Brakes" />
+          <ScalarProperty Name="Wheels" ColumnName="Wheels" />
+          <ScalarProperty Name="StrWheel" ColumnName="StrWheel" />
+          <ScalarProperty Name="Saddle" ColumnName="Saddle" />
+          <ScalarProperty Name="Pedals" ColumnName="Pedals" />
+          <ScalarProperty Name="Accesories" ColumnName="Accesories" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saddle">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Saddle">
+        <MappingFragment StoreEntitySet="Saddle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SaddleName" ColumnName="SaddleName" />
+          <ScalarProperty Name="SaddleType" ColumnName="SaddleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shifters">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Shifters">
+        <MappingFragment StoreEntitySet="Shifters">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ShiftersName" ColumnName="ShiftersName" />
+          <ScalarProperty Name="ShiftersType" ColumnName="ShiftersType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StrWheel">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.StrWheel">
+        <MappingFragment StoreEntitySet="StrWheel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StrWheelName" ColumnName="StrWheelName" />
+          <ScalarProperty Name="StrWheelType" ColumnName="StrWheelType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transmission">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Transmission">
+        <MappingFragment StoreEntitySet="Transmission">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SpeedCount" ColumnName="SpeedCount" />
+          <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+          <ScalarProperty Name="Chain" ColumnName="Chain" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wheels">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Wheels">
+        <MappingFragment StoreEntitySet="Wheels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Tyres" ColumnName="Tyres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advertising">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Advertising">
+        <MappingFragment StoreEntitySet="Advertising">
+          <ScalarProperty Name="Advertising_ID" ColumnName="Advertising_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Comments">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Comments_ID" ColumnName="Comments_ID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Image">
+      <EntityTypeMapping TypeName="BikeSiteDBModel.Image">
+        <MappingFragment StoreEntitySet="Image">
+          <ScalarProperty Name="Image_ID" ColumnName="Image_ID" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

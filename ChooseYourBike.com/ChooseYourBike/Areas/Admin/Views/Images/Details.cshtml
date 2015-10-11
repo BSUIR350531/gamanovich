@@ -1,0 +1,43 @@
+﻿@model ChooseYourBike.Models.Image
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Image</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </dt>
+    
+            <dd>
+                <img style="width: 80px; height: 80px" src="~/Content/images/profile/@Model.ImagePath" alt="">
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Product.Model)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Product.Model)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,144 @@
+﻿@model ChooseYourBike.Models.Product
+
+@{
+    Layout = "~/Views/Shared/BikePage/_LayoutBikePage.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Info</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Start Bootstrap</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9">
+
+            <div class="row carousel-holder">
+
+                <div class="col-md-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            @for (var i = 1; i < Model.Image2.Count; i++)
+                            {
+                                <li data-target="#carousel-example-generic" data-slide-to="@i"></li>
+                            }
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="slide-image" style="height: 300px" src="~/Content/images/profile/@Model.Image2.Select(x => x.ImagePath).First()" alt="">
+                            </div>
+                            @foreach (var item in Model.Image2.Skip(1))
+                            {
+                                <div class="item">
+                                    <img class="slide-image" style="height: 300px" src="~/Content/images/profile/@item.ImagePath" alt="">
+                                </div>
+                            }
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="~/Content/images/profile/@Model.Image2.Select(x => x.ImagePath).First()" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h4>@Model.Mark1.Mark_Name @Model.Model</h4>
+                </div>
+            </div>
+        </div>
+
+        @*TODO make advertising column there*@
+        <div class="col-md-3">
+            <p class="lead">Shop Name</p>
+            @foreach (var item in Model.Advertising11)
+            {
+                <div class="well">
+                    <h4>@item.CompanyAddress</h4>
+                    <h4>@item.CompanyName</h4>
+                    <h4>@item.Price</h4>
+                    
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div class="container">
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+@*<div>
+            <div style="display: inline-block; width: 300px; height: 300px">
+                <img class="img-responsive" style="display: inline-block" src="~/Content/images/profile/@Model.Image2.Select(x => x.ImagePath).DefaultIfEmpty("Unknown").First()" alt="img"/>
+            </div>
+            <div style="display: inline-block; align-items: baseline">
+
+                Марка: @Model.Mark1.Mark_Name<br/>
+                Модель: @Model.Model<br/>
+                Категория: @Model.Category1.Category_Name<br/>
+
+            </div>
+        </div>*@
+</body>
+</html>
